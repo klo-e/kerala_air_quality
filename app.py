@@ -1,11 +1,12 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import base64
-from io import BytesIO
 import dash
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+from io import BytesIO
+import base64
 
 data = pd.read_csv('combined_airquality_edit.csv')
 # Standardize city names
