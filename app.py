@@ -23,6 +23,9 @@ cities = data['City/Town/Village/Area'].unique()
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
+# Accessing the DATABASE_URL environment variable
+database_url = os.getenv('DATABASE_URL')
+
 app.layout = html.Div([
     dbc.Row([
         dbc.Col([
