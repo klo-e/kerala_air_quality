@@ -21,6 +21,7 @@ cities = data['City/Town/Village/Area'].unique()
 
 # Initialize the Dash app
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 app.layout = html.Div([
     dbc.Row([
@@ -131,4 +132,5 @@ def update_graphs(selected_cities):
     return no2_figure, rspm_pm10_figure, so2_figure
 
 if __name__ == '__main__':
-    app.run_server(debug=True, port=8051)
+    app.run_server(debug=True)
+    #app.run_server(debug=True, port=8051)
